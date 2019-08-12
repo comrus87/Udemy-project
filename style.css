@@ -1,0 +1,20 @@
+div {
+	width: 180px;
+	height: 180px;
+    border-radius: 9px;
+	background-image: linear-gradient(to top, transparent 50%, #f8e34b 50%, #f8e34b 100%), 
+	                    linear-gradient(to right, transparent 50%, #0c0c0c 50%, #0c0c0c 100%);
+	position: relative;
+}
+
+ div::before {
+	content: "";
+	position: absolute;
+	width: 90px;
+	height: 90px;
+	background-color: #eeedef;
+	top: 90px;
+	left: 0;
+	border-bottom-left-radius: 9px;
+    box-shadow: inset 0px 6px 4px #c8c8c8;
+}
