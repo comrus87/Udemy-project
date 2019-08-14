@@ -86,3 +86,5 @@ function chooseOptExpenses () {
 }
 
 chooseOptExpenses();
+
+let a;
