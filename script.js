@@ -60,7 +60,7 @@ function detectLevel () {
   };
 };
 
-detectLevel ();
+detectLevel();
 
 function checkSavings () {
   if (appData.savings) {
@@ -77,6 +77,12 @@ checkSavings();
 function chooseOptExpenses () {
 	for (let i = 1; i < 4; i++) {
   	  let article = prompt('Статья необязательных расходов?', '');
+  	  if ( isNaN(article) == false && article != null && article != '') {
   	   appData.optionalExpenses[i] = article;
+  	  } else {
+  	  	i--;
+  	  };
   	};
 }
+
+chooseOptExpenses();
