@@ -43,7 +43,7 @@ chooseExpenses();
 
 function detectDayBudget () {
   appData.moneyPerDay = (appData.budget/MONTH).toFixed();
-  alert('Ежедневный бюджет: ' + appData.moneyPerDay);
+  alert('Ежедневный бюджет: ' + appData.moneyPerDay + 'руб.');
 };
 
 detectDayBudget();
@@ -77,14 +77,8 @@ checkSavings();
 function chooseOptExpenses () {
 	for (let i = 1; i < 4; i++) {
   	  let article = prompt('Статья необязательных расходов?', '');
-  	  if ( isNaN(article) == false && article != null && article != '') {
   	   appData.optionalExpenses[i] = article;
-  	  } else {
-  	  	i--;
-  	  };
   	};
 }
 
 chooseOptExpenses();
-
-let a;
